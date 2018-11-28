@@ -31,5 +31,12 @@ namespace WarehouseManagement
         {
 
         }
+
+        private void productDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DirectoryForm directoryform= new DirectoryForm();
+            directoryform.StartPosition = FormStartPosition.CenterScreen;
+            directoryform.Show();
+        }
     }
 }
