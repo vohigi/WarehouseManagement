@@ -28,20 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.warehouseStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goodsReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dispalyOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.confirmOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createGoodsReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayGoodsReceiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.warehouseStockToolStripMenuItem,
+            this.productDirectoryToolStripMenuItem,
+            this.goodsReceiptToolStripMenuItem,
+            this.ordersToolStripMenuItem,
+            this.confirmOrderToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // warehouseStockToolStripMenuItem
+            // 
+            this.warehouseStockToolStripMenuItem.Name = "warehouseStockToolStripMenuItem";
+            this.warehouseStockToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.warehouseStockToolStripMenuItem.Text = "Warehouse Stock";
+            this.warehouseStockToolStripMenuItem.Click += new System.EventHandler(this.warehouseStockToolStripMenuItem_Click);
+            // 
+            // productDirectoryToolStripMenuItem
+            // 
+            this.productDirectoryToolStripMenuItem.Name = "productDirectoryToolStripMenuItem";
+            this.productDirectoryToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.productDirectoryToolStripMenuItem.Text = "Product Directory";
+            // 
+            // goodsReceiptToolStripMenuItem
+            // 
+            this.goodsReceiptToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createGoodsReceiptToolStripMenuItem,
+            this.displayGoodsReceiptToolStripMenuItem});
+            this.goodsReceiptToolStripMenuItem.Name = "goodsReceiptToolStripMenuItem";
+            this.goodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.goodsReceiptToolStripMenuItem.Text = "Goods Receipt";
+            // 
+            // ordersToolStripMenuItem
+            // 
+            this.ordersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createOrderToolStripMenuItem,
+            this.dispalyOrdersToolStripMenuItem});
+            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.ordersToolStripMenuItem.Text = "Orders";
+            // 
+            // createOrderToolStripMenuItem
+            // 
+            this.createOrderToolStripMenuItem.Name = "createOrderToolStripMenuItem";
+            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createOrderToolStripMenuItem.Text = "Create Order";
+            // 
+            // dispalyOrdersToolStripMenuItem
+            // 
+            this.dispalyOrdersToolStripMenuItem.Name = "dispalyOrdersToolStripMenuItem";
+            this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dispalyOrdersToolStripMenuItem.Text = "Dispaly Orders";
+            // 
+            // confirmOrderToolStripMenuItem
+            // 
+            this.confirmOrderToolStripMenuItem.Name = "confirmOrderToolStripMenuItem";
+            this.confirmOrderToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.confirmOrderToolStripMenuItem.Text = "Confirm Order";
+            // 
+            // createGoodsReceiptToolStripMenuItem
+            // 
+            this.createGoodsReceiptToolStripMenuItem.Name = "createGoodsReceiptToolStripMenuItem";
+            this.createGoodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.createGoodsReceiptToolStripMenuItem.Text = "Create Goods Receipt";
+            this.createGoodsReceiptToolStripMenuItem.Click += new System.EventHandler(this.createGoodsReceiptToolStripMenuItem_Click);
+            // 
+            // displayGoodsReceiptToolStripMenuItem
+            // 
+            this.displayGoodsReceiptToolStripMenuItem.Name = "displayGoodsReceiptToolStripMenuItem";
+            this.displayGoodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.displayGoodsReceiptToolStripMenuItem.Text = "Display Goods Receipt";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainWindow";
-            this.Text = "Form1";
+            this.Text = "Warehouse Management";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem warehouseStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goodsReceiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dispalyOrdersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem confirmOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createGoodsReceiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem displayGoodsReceiptToolStripMenuItem;
     }
 }
 
