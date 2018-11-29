@@ -129,15 +129,6 @@ namespace WarehouseManagement
             {
                 MessageBox.Show("This model already exists.\nPlease add new model");
             }
-            /*    AddRow();
-            else
-            {
-                if (CheckModel())
-                {
-                    emptySpaces += "This model already exists\n";
-                }
-                MessageBox.Show(emptySpaces);
-            }*/
         }
         private void Load_Manufacturer()
         {

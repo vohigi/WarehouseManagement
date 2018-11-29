@@ -24,7 +24,16 @@ namespace WarehouseManagement
 
         private void warehouseStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                StockForm stockForm = new StockForm();
+                stockForm.StartPosition = FormStartPosition.CenterScreen;
+                stockForm.Show();
+            }
+            catch (Exception stockEx)
+            {
+                MessageBox.Show(stockEx.Message);
+            }
         }
 
         private void createGoodsReceiptToolStripMenuItem_Click(object sender, EventArgs e)
@@ -34,9 +43,21 @@ namespace WarehouseManagement
 
         private void productDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DirectoryForm directoryform= new DirectoryForm();
-            directoryform.StartPosition = FormStartPosition.CenterScreen;
-            directoryform.Show();
+            try
+            {
+                DirectoryForm directoryform = new DirectoryForm();
+                directoryform.StartPosition = FormStartPosition.CenterScreen;
+                directoryform.Show();
+            } catch(Exception directoryEx)
+            {
+                MessageBox.Show(directoryEx.Message);
+            }
+            
+        }
+
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
