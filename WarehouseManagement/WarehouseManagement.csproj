@@ -70,6 +70,12 @@
     <Compile Include="DirectoryForm.Designer.cs">
       <DependentUpon>DirectoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GoodsRecieptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsRecieptForm.Designer.cs">
+      <DependentUpon>GoodsRecieptForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="DirectoryForm.resx">
       <DependentUpon>DirectoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsRecieptForm.resx">
+      <DependentUpon>GoodsRecieptForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

@@ -38,7 +38,16 @@ namespace WarehouseManagement
 
         private void createGoodsReceiptToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                GoodsRecieptForm goodsRecieptForm = new GoodsRecieptForm();
+                goodsRecieptForm.StartPosition = FormStartPosition.CenterScreen;
+                goodsRecieptForm.Show();
+            }
+            catch (Exception directoryEx)
+            {
+                MessageBox.Show(directoryEx.Message);
+            }
         }
 
         private void productDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
