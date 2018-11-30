@@ -26,6 +26,12 @@ namespace WarehouseManagement
 
         private void DirectoryForm_Load(object sender, EventArgs e)
         {
+            LoadProductDirectoryTable();
+            Load_Manufacturer();
+        }
+        
+        private void LoadProductDirectoryTable()
+        {
             MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
             connection.Open();
             try
@@ -41,9 +47,7 @@ namespace WarehouseManagement
             }
             catch { }
             connection.Close();
-            Load_Manufacturer();
         }
-        
 
         private void AddRow()
         {
@@ -53,8 +57,8 @@ namespace WarehouseManagement
             {
                 MySqlCommand command1 = connection.CreateCommand();
 
-                string manufacturerText = manufacturerBox.Text;
-                string modelText = modelBox.Text;
+                string manufacturerText = manufacturerBox.Text.ToUpper();
+                string modelText = modelBox.Text.ToUpper();
 
                 decimal price = Convert.ToDecimal(priceBox.Text);
 
@@ -158,7 +162,7 @@ namespace WarehouseManagement
             MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
             connection.Open();
             
-            string manufacturerText = manufacturerBox.Text;
+            string manufacturerText = manufacturerBox.Text.ToUpper();
             string modelStr = "SELECT model_name FROM product_directory " +
                 "WHERE product_directory.manufacturer = @manufacturerText";
 
@@ -174,13 +178,23 @@ namespace WarehouseManagement
             reader.Close();
             
             connection.Close();
-            if (modelList.Contains(modelBox.Text))
+            if (modelList.Contains(modelBox.Text.ToUpper()))
                 return false;
             else return true;
         }
 
         private void manufacturerBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadProductDirectoryTable();
         }
     }
 }
