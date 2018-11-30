@@ -68,5 +68,19 @@ namespace WarehouseManagement
         {
 
         }
+
+        private void createOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OrderForm orderForm = new OrderForm();
+                orderForm.StartPosition = FormStartPosition.CenterScreen;
+                orderForm.Show();
+            }
+            catch (Exception orderEx)
+            {
+                MessageBox.Show(orderEx.Message);
+            }
+        }
     }
 }
