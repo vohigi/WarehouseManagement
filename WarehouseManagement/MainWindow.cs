@@ -27,8 +27,8 @@ namespace WarehouseManagement
             try
             {
                 StockForm stockForm = new StockForm();
-                stockForm.StartPosition = FormStartPosition.CenterScreen;
-                stockForm.Show();
+                
+                stockForm.ShowDialog(this);
             }
             catch (Exception stockEx)
             {
@@ -42,7 +42,7 @@ namespace WarehouseManagement
             {
                 GoodsRecieptForm goodsRecieptForm = new GoodsRecieptForm();
                 goodsRecieptForm.StartPosition = FormStartPosition.CenterScreen;
-                goodsRecieptForm.Show();
+                goodsRecieptForm.Show(this);
             }
             catch (Exception directoryEx)
             {
@@ -56,7 +56,7 @@ namespace WarehouseManagement
             {
                 DirectoryForm directoryform = new DirectoryForm();
                 directoryform.StartPosition = FormStartPosition.CenterScreen;
-                directoryform.Show();
+                directoryform.Show(this);
             } catch(Exception directoryEx)
             {
                 MessageBox.Show(directoryEx.Message);

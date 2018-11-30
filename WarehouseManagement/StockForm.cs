@@ -18,7 +18,10 @@ namespace WarehouseManagement
 
         public StockForm()
         {
+
             InitializeComponent();
+            
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -36,12 +39,13 @@ namespace WarehouseManagement
 
         private void StockForm_Load(object sender, EventArgs e)
         {
+            
             MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
             connection.Open();
             try
             {
                 MySqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT * FROM stock";
+                command1.CommandText = "SELECT id_stock, manufacturer, model_name, price, count_stock FROM stock, product_directory WHERE product_directory.id_prod=stock.id_prod";
                 adapter1 = new MySqlDataAdapter(command1);
                 DataSet dataSet1 = new DataSet();
                 adapter1.Fill(dataSet1);

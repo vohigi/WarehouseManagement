@@ -58,14 +58,14 @@
             // warehouseStockToolStripMenuItem
             // 
             this.warehouseStockToolStripMenuItem.Name = "warehouseStockToolStripMenuItem";
-            this.warehouseStockToolStripMenuItem.Size = new System.Drawing.Size(110, 20);
+            this.warehouseStockToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.warehouseStockToolStripMenuItem.Text = "Warehouse Stock";
             this.warehouseStockToolStripMenuItem.Click += new System.EventHandler(this.warehouseStockToolStripMenuItem_Click);
             // 
             // productDirectoryToolStripMenuItem
             // 
             this.productDirectoryToolStripMenuItem.Name = "productDirectoryToolStripMenuItem";
-            this.productDirectoryToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
+            this.productDirectoryToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.productDirectoryToolStripMenuItem.Text = "Product Directory";
             this.productDirectoryToolStripMenuItem.Click += new System.EventHandler(this.productDirectoryToolStripMenuItem_Click);
             // 
@@ -75,20 +75,20 @@
             this.createGoodsReceiptToolStripMenuItem,
             this.displayGoodsReceiptToolStripMenuItem});
             this.goodsReceiptToolStripMenuItem.Name = "goodsReceiptToolStripMenuItem";
-            this.goodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.goodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.goodsReceiptToolStripMenuItem.Text = "Goods Receipt";
             // 
             // createGoodsReceiptToolStripMenuItem
             // 
             this.createGoodsReceiptToolStripMenuItem.Name = "createGoodsReceiptToolStripMenuItem";
-            this.createGoodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.createGoodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.createGoodsReceiptToolStripMenuItem.Text = "Create Goods Receipt";
             this.createGoodsReceiptToolStripMenuItem.Click += new System.EventHandler(this.createGoodsReceiptToolStripMenuItem_Click);
             // 
             // displayGoodsReceiptToolStripMenuItem
             // 
             this.displayGoodsReceiptToolStripMenuItem.Name = "displayGoodsReceiptToolStripMenuItem";
-            this.displayGoodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.displayGoodsReceiptToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.displayGoodsReceiptToolStripMenuItem.Text = "Display Goods Receipt";
             // 
             // ordersToolStripMenuItem
@@ -97,25 +97,25 @@
             this.createOrderToolStripMenuItem,
             this.dispalyOrdersToolStripMenuItem});
             this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ordersToolStripMenuItem.Text = "Orders";
             // 
             // createOrderToolStripMenuItem
             // 
             this.createOrderToolStripMenuItem.Name = "createOrderToolStripMenuItem";
-            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.createOrderToolStripMenuItem.Text = "Create Order";
             // 
             // dispalyOrdersToolStripMenuItem
             // 
             this.dispalyOrdersToolStripMenuItem.Name = "dispalyOrdersToolStripMenuItem";
-            this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.dispalyOrdersToolStripMenuItem.Text = "Dispaly Orders";
             // 
             // confirmOrderToolStripMenuItem
             // 
             this.confirmOrderToolStripMenuItem.Name = "confirmOrderToolStripMenuItem";
-            this.confirmOrderToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.confirmOrderToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.confirmOrderToolStripMenuItem.Text = "Confirm Order";
             // 
             // MainWindow
