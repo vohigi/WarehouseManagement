@@ -45,7 +45,6 @@ namespace WarehouseManagement
                 adapter1 = new MySqlDataAdapter(command1);
                 DataSet dataSet1 = new DataSet();
                 adapter1.Fill(dataSet1);
-                //dataGridView1.ColumnCount = 5;
                 dataGridView1.DataSource = dataSet1.Tables[0];
 
             }

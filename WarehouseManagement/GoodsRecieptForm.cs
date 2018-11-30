@@ -126,6 +126,7 @@ namespace WarehouseManagement
             if (command2.ExecuteNonQuery() > 0)
             {
                 MessageBox.Show("Successfully inserted!");
+                AddToStock();
             }
             else
             {
@@ -145,6 +146,59 @@ namespace WarehouseManagement
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private void AddToStock()
+        {
+            try
+            {
+                List<string> stockList = new List<string>();
+
+                MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
+                connection.Open();
+                MySqlCommand command1 = connection.CreateCommand();
+                command1.CommandText = "SELECT * FROM smartphone_stock.goods_receipt order by id_goods Desc limit 1;";
+                MySqlCommand command2 = connection.CreateCommand();
+                command2.CommandText = "SELECT * FROM smartphone_stock.stock";
+                MySqlCommand command3 = connection.CreateCommand();
+
+                MySqlDataReader reader = command1.ExecuteReader();
+                string[] lastRow = new string[2];
+                if (reader.Read())
+                {
+
+                    lastRow[0] = reader["id_prod"].ToString();
+                    lastRow[1] = reader["count"].ToString();
+                }
+                reader.Close();
+                MySqlDataReader readerStock = command2.ExecuteReader();
+                while (readerStock.Read())
+                {
+
+                    stockList.Add(readerStock["id_prod"].ToString());
+                }
+                readerStock.Close();
+              int k = 0;
+                if (stockList.Contains(lastRow[0]))
+                {
+                    command3.CommandText = "update smartphone_stock.stock set count_stock = count_stock + @count where id_prod = " + lastRow[0] + "; ";
+                    command3.Parameters.AddWithValue("@count", lastRow[1]);
+                    k = command3.ExecuteNonQuery();
+                    
+                }
+                else
+                {
+                    command3.CommandText = "INSERT INTO smartphone_stock.stock(id_prod, count_stock)" +
+                    "values(@id_prod, @count) ";
+                    command3.Parameters.AddWithValue("@count", lastRow[1]);
+                    command3.Parameters.AddWithValue("@id_prod", lastRow[0]);
+                    k = command3.ExecuteNonQuery();
+                }
+                if(k>0) MessageBox.Show("Successfully added to stock!");
+                else MessageBox.Show("Error!!");
+                connection.Close();
+            }
+            catch (Exception ex){ MessageBox.Show(ex.Message); }
+            
         }
     }
 }
