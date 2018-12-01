@@ -55,22 +55,18 @@ namespace WarehouseManagement
 
             conn.Open();
 
-            
-
-
             var doc = new Document();
             PdfWriter.GetInstance(doc, new FileStream(Application.StartupPath + @"\Report.pdf", FileMode.Create));
             doc.Open();
-
-
-
+            BaseFont baseFont = BaseFont.CreateFont(@"C:\times.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
             PdfPTable tab = new PdfPTable(1);
             PdfPTable pdfTableFolder = new PdfPTable(1);
 
             pdfTableFolder.DefaultCell.BorderWidth = 0;
             pdfTableFolder.WidthPercentage = 100;
             pdfTableFolder.DefaultCell.HorizontalAlignment = Element.ALIGN_CENTER;
-            Chunk cnkFoolder = new Chunk("REPORT");
+            Chunk cnkFoolder = new Chunk("REPORT",font);
             cnkFoolder.Font.Size = 30;
             pdfTableFolder.AddCell(new Phrase(cnkFoolder));
             doc.Add(pdfTableFolder);
@@ -78,7 +74,7 @@ namespace WarehouseManagement
 
             if (checkedListBox1.GetItemChecked(0))
             {
-                string sql = "SELECT id_goods, manufacturer, model_name, goods_receipt.count, date_arrival FROM goods_receipt, product_directory WHERE product_directory.id_prod = goods_receipt.id_prod and date_arrival >= " + dateTimePicker1.Value.ToString("yyyy-MM-dd") + " and date_arrival <= " + dateTimePicker2.Value.ToString("yyyy-MM-dd") + ";";
+                string sql = "SELECT id_goods, manufacturer, model_name, goods_receipt.count, date_arrival FROM goods_receipt, product_directory WHERE product_directory.id_prod = goods_receipt.id_prod and date_arrival >= '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and date_arrival <= '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "';";
                 MySqlCommand command = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -103,7 +99,7 @@ namespace WarehouseManagement
                     table.AddCell((reader[1].ToString()));
                     table.AddCell((reader[2].ToString()));
                     table.AddCell((reader[3].ToString()));
-                    table.AddCell((reader[4].ToString()));
+                    table.AddCell(Convert.ToDateTime(reader[4]).ToString("yyyy-MM-dd"));
                 }
                 doc.Add(table);
                 reader.Close();
@@ -149,7 +145,7 @@ namespace WarehouseManagement
 
             if (checkedListBox1.GetItemChecked(2))
             {
-                string sql = "SELECT id_order, manufacturer, model_name, count, date_order, is_confirmed FROM product_order, product_directory WHERE product_order.id_prod = product_directory.id_prod and date_order >= " + dateTimePicker1.Value.ToString("yyyy-MM-dd") + " and date_order <= " + dateTimePicker2.Value.ToString("yyyy-MM-dd") + ";";
+                string sql = "SELECT id_order, manufacturer, model_name, count, date_order, is_confirmed FROM product_order, product_directory WHERE product_order.id_prod = product_directory.id_prod and date_order >= '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and date_order <= '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "';";
                 MySqlCommand command = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -168,23 +164,23 @@ namespace WarehouseManagement
                 table.AddCell("Count");
                 table.AddCell("Order Date");
                 table.AddCell("Confirmed");
-
+                string date = "";
                 while (reader.Read())
                 {
                     table.AddCell((reader[0].ToString()));
                     table.AddCell((reader[1].ToString()));
                     table.AddCell((reader[2].ToString()));
                     table.AddCell((reader[3].ToString()));
-                    table.AddCell((reader[4].ToString()));
+                    table.AddCell(Convert.ToDateTime(reader[4]).ToString("yyyy-MM-dd"));
                     table.AddCell((reader[5].ToString()));
                 }
                 doc.Add(table);
                 reader.Close();
             }
 
-            if (checkedListBox1.GetItemChecked(2))
+            if (checkedListBox1.GetItemChecked(3))
             {
-                string sql = "SELECT id_writeoff, manufacturer, model_name, date_paid FROM product_directory, product_writeoff WHERE product_directory.id_prod = product_writeoff.id_prod and date_paid >= " + dateTimePicker1.Value.ToString("yyyy-MM-dd") + " and date_paid <= " + dateTimePicker2.Value.ToString("yyyy-MM-dd") + ";";
+                string sql = "SELECT id_writeoff, manufacturer, model_name, date_paid FROM product_directory, product_writeoff WHERE product_directory.id_prod = product_writeoff.id_prod and date_paid >= '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' and date_paid <= '" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "';";
                 MySqlCommand command = new MySqlCommand(sql, conn);
                 MySqlDataReader reader = command.ExecuteReader();
 
@@ -207,7 +203,7 @@ namespace WarehouseManagement
                     table.AddCell((reader[0].ToString()));
                     table.AddCell((reader[1].ToString()));
                     table.AddCell((reader[2].ToString()));
-                    table.AddCell((reader[3].ToString()));
+                    table.AddCell(Convert.ToDateTime(reader[3]).ToString("yyyy-MM-dd"));
                 }
                 doc.Add(table);
                 reader.Close();
