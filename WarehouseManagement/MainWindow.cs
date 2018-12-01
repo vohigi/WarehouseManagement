@@ -68,5 +68,19 @@ namespace WarehouseManagement
         {
 
         }
+
+        private void makeAReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReportForm goodsRecieptForm = new ReportForm();
+                goodsRecieptForm.StartPosition = FormStartPosition.CenterScreen;
+                goodsRecieptForm.Show();
+            }
+            catch (Exception directoryEx)
+            {
+                MessageBox.Show(directoryEx.Message);
+            }
+        }
     }
 }

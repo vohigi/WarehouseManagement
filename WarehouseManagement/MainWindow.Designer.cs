@@ -38,6 +38,7 @@
             this.createOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dispalyOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.confirmOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.makeAReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,8 @@
             this.productDirectoryToolStripMenuItem,
             this.goodsReceiptToolStripMenuItem,
             this.ordersToolStripMenuItem,
-            this.confirmOrderToolStripMenuItem});
+            this.confirmOrderToolStripMenuItem,
+            this.makeAReportToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -118,6 +120,13 @@
             this.confirmOrderToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.confirmOrderToolStripMenuItem.Text = "Confirm Order";
             // 
+            // makeAReportToolStripMenuItem
+            // 
+            this.makeAReportToolStripMenuItem.Name = "makeAReportToolStripMenuItem";
+            this.makeAReportToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.makeAReportToolStripMenuItem.Text = "Make a Report";
+            this.makeAReportToolStripMenuItem.Click += new System.EventHandler(this.makeAReportToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,6 +157,7 @@
         private System.Windows.Forms.ToolStripMenuItem confirmOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createGoodsReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem displayGoodsReceiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem makeAReportToolStripMenuItem;
     }
 }
 
