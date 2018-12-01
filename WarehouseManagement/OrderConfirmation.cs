@@ -106,7 +106,7 @@ namespace WarehouseManagement
                 return true;
 
             }
-            else { return false; }
+            else { return false; MessageBox.Show("Not enough stock!"); }
             
         }
         private void LoadTable()
