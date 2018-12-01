@@ -41,7 +41,7 @@ namespace WarehouseManagement
             try
             {
                 GoodsRecieptForm goodsRecieptForm = new GoodsRecieptForm();
-                goodsRecieptForm.StartPosition = FormStartPosition.CenterScreen;
+                goodsRecieptForm.StartPosition = FormStartPosition.CenterParent;
                 goodsRecieptForm.Show(this);
             }
             catch (Exception directoryEx)
@@ -55,7 +55,7 @@ namespace WarehouseManagement
             try
             {
                 DirectoryForm directoryform = new DirectoryForm();
-                directoryform.StartPosition = FormStartPosition.CenterScreen;
+                directoryform.StartPosition = FormStartPosition.CenterParent;
                 directoryform.Show(this);
             } catch(Exception directoryEx)
             {
@@ -74,8 +74,8 @@ namespace WarehouseManagement
             try
             {
                 OrderForm orderForm = new OrderForm();
-                orderForm.StartPosition = FormStartPosition.CenterScreen;
-                orderForm.Show();
+                orderForm.StartPosition = FormStartPosition.CenterParent;
+                orderForm.Show(this);
             }
             catch (Exception orderEx)
             {

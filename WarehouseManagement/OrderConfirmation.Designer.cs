@@ -100,6 +100,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "OrderConfirmation";
             this.Text = "Order Confirmation";
             this.Load += new System.EventHandler(this.OrderConfirmation_Load);

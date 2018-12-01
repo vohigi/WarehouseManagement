@@ -231,6 +231,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 283);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DirectoryForm";
             this.Text = "DirectoryForm";
             this.Load += new System.EventHandler(this.DirectoryForm_Load);
