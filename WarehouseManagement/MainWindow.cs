@@ -89,5 +89,12 @@ namespace WarehouseManagement
             orderConfirmation.StartPosition = FormStartPosition.CenterParent;
             orderConfirmation.Show(this);
         }
+
+        private void dispalyOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderDisplayForm orderDisplayForm = new OrderDisplayForm();
+            orderDisplayForm.StartPosition = FormStartPosition.CenterScreen;
+            orderDisplayForm.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WarehouseManagement
 {
-    partial class StockForm
+    partial class OrderDisplayForm
     {
         /// <summary>
         /// Required designer variable.
@@ -44,22 +44,18 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(514, 286);
             this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // StockForm
+            // OrderDisplayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 242);
+            this.ClientSize = new System.Drawing.Size(514, 286);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Location = new System.Drawing.Point(80, 115);
-            this.Name = "StockForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "StockForm";
-            this.Load += new System.EventHandler(this.StockForm_Load);
+            this.Name = "OrderDisplayForm";
+            this.Text = "OrderDisplayForm";
+            this.Load += new System.EventHandler(this.OrderDisplayForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
