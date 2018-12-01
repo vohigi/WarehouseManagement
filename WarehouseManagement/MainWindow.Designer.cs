@@ -103,22 +103,14 @@
             // createOrderToolStripMenuItem
             // 
             this.createOrderToolStripMenuItem.Name = "createOrderToolStripMenuItem";
-<<<<<<< HEAD
-            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-=======
             this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
->>>>>>> cab3233ed97be24b7f9565e1bd65541b70f0d5a0
             this.createOrderToolStripMenuItem.Text = "Create Order";
             this.createOrderToolStripMenuItem.Click += new System.EventHandler(this.createOrderToolStripMenuItem_Click);
             // 
             // dispalyOrdersToolStripMenuItem
             // 
             this.dispalyOrdersToolStripMenuItem.Name = "dispalyOrdersToolStripMenuItem";
-<<<<<<< HEAD
-            this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-=======
             this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
->>>>>>> cab3233ed97be24b7f9565e1bd65541b70f0d5a0
             this.dispalyOrdersToolStripMenuItem.Text = "Dispaly Orders";
             // 
             // confirmOrderToolStripMenuItem
