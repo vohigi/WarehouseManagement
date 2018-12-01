@@ -37,7 +37,7 @@
             this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dispalyOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.confirmOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.confirmOrderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,8 +47,7 @@
             this.warehouseStockToolStripMenuItem,
             this.productDirectoryToolStripMenuItem,
             this.goodsReceiptToolStripMenuItem,
-            this.ordersToolStripMenuItem,
-            this.confirmOrderToolStripMenuItem});
+            this.ordersToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -95,7 +94,8 @@
             // 
             this.ordersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createOrderToolStripMenuItem,
-            this.dispalyOrdersToolStripMenuItem});
+            this.dispalyOrdersToolStripMenuItem,
+            this.confirmOrderToolStripMenuItem1});
             this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
             this.ordersToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.ordersToolStripMenuItem.Text = "Orders";
@@ -103,29 +103,22 @@
             // createOrderToolStripMenuItem
             // 
             this.createOrderToolStripMenuItem.Name = "createOrderToolStripMenuItem";
-<<<<<<< HEAD
             this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-=======
-            this.createOrderToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
->>>>>>> cab3233ed97be24b7f9565e1bd65541b70f0d5a0
             this.createOrderToolStripMenuItem.Text = "Create Order";
             this.createOrderToolStripMenuItem.Click += new System.EventHandler(this.createOrderToolStripMenuItem_Click);
             // 
             // dispalyOrdersToolStripMenuItem
             // 
             this.dispalyOrdersToolStripMenuItem.Name = "dispalyOrdersToolStripMenuItem";
-<<<<<<< HEAD
             this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-=======
-            this.dispalyOrdersToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
->>>>>>> cab3233ed97be24b7f9565e1bd65541b70f0d5a0
             this.dispalyOrdersToolStripMenuItem.Text = "Dispaly Orders";
             // 
-            // confirmOrderToolStripMenuItem
+            // confirmOrderToolStripMenuItem1
             // 
-            this.confirmOrderToolStripMenuItem.Name = "confirmOrderToolStripMenuItem";
-            this.confirmOrderToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.confirmOrderToolStripMenuItem.Text = "Confirm Order";
+            this.confirmOrderToolStripMenuItem1.Name = "confirmOrderToolStripMenuItem1";
+            this.confirmOrderToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.confirmOrderToolStripMenuItem1.Text = "Confirm Order";
+            this.confirmOrderToolStripMenuItem1.Click += new System.EventHandler(this.confirmOrderToolStripMenuItem1_Click);
             // 
             // MainWindow
             // 
@@ -154,9 +147,9 @@
         private System.Windows.Forms.ToolStripMenuItem ordersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dispalyOrdersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem confirmOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createGoodsReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem displayGoodsReceiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem confirmOrderToolStripMenuItem1;
     }
 }
 
