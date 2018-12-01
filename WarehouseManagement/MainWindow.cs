@@ -27,8 +27,8 @@ namespace WarehouseManagement
             try
             {
                 StockForm stockForm = new StockForm();
-                stockForm.StartPosition = FormStartPosition.CenterScreen;
-                stockForm.Show();
+                
+                stockForm.ShowDialog(this);
             }
             catch (Exception stockEx)
             {
@@ -41,8 +41,8 @@ namespace WarehouseManagement
             try
             {
                 GoodsRecieptForm goodsRecieptForm = new GoodsRecieptForm();
-                goodsRecieptForm.StartPosition = FormStartPosition.CenterScreen;
-                goodsRecieptForm.Show();
+                goodsRecieptForm.StartPosition = FormStartPosition.CenterParent;
+                goodsRecieptForm.Show(this);
             }
             catch (Exception directoryEx)
             {
@@ -55,8 +55,8 @@ namespace WarehouseManagement
             try
             {
                 DirectoryForm directoryform = new DirectoryForm();
-                directoryform.StartPosition = FormStartPosition.CenterScreen;
-                directoryform.Show();
+                directoryform.StartPosition = FormStartPosition.CenterParent;
+                directoryform.Show(this);
             } catch(Exception directoryEx)
             {
                 MessageBox.Show(directoryEx.Message);
@@ -69,18 +69,39 @@ namespace WarehouseManagement
 
         }
 
-        private void makeAReportToolStripMenuItem_Click(object sender, EventArgs e)
+        private void createOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
-                ReportForm goodsRecieptForm = new ReportForm();
-                goodsRecieptForm.StartPosition = FormStartPosition.CenterScreen;
-                goodsRecieptForm.Show();
+                OrderForm orderForm = new OrderForm();
+                orderForm.StartPosition = FormStartPosition.CenterParent;
+                orderForm.Show(this);
             }
-            catch (Exception directoryEx)
+            catch (Exception orderEx)
             {
-                MessageBox.Show(directoryEx.Message);
+                MessageBox.Show(orderEx.Message);
             }
+        }
+
+        private void confirmOrderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OrderConfirmation orderConfirmation = new OrderConfirmation();
+            orderConfirmation.StartPosition = FormStartPosition.CenterParent;
+            orderConfirmation.Show(this);
+        }
+
+        private void dispalyOrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderDisplayForm orderDisplayForm = new OrderDisplayForm();
+            orderDisplayForm.StartPosition = FormStartPosition.CenterParent;
+            orderDisplayForm.Show(this);
+        }
+
+        private void makeAReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportForm orderReportForm = new ReportForm();
+            orderReportForm.StartPosition = FormStartPosition.CenterParent;
+            orderReportForm.Show(this);
         }
     }
 }

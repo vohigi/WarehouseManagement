@@ -11,28 +11,31 @@ using MySql.Data.MySqlClient;
 
 namespace WarehouseManagement
 {
-    public partial class StockForm : Form
+    public partial class OrderDisplayForm : Form
     {
         MainWindow obj = (MainWindow)Application.OpenForms["MainWindow"];
         private MySqlDataAdapter adapter1;
 
-        public StockForm()
+        public OrderDisplayForm()
         {
             InitializeComponent();
         }
         
-        private void StockForm_Load(object sender, EventArgs e)
+
+        private void OrderDisplayForm_Load(object sender, EventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
             connection.Open();
             try
             {
                 MySqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT id_stock, manufacturer, model_name, price, count_stock FROM stock, product_directory " +
-                    "WHERE product_directory.id_prod=stock.id_prod";
+                command1.CommandText = "SELECT id_order, manufacturer, model_name, count, date_order, is_confirmed" +
+                    " FROM product_order, product_directory" +
+                    " WHERE product_order.id_prod = product_directory.id_prod;";
                 adapter1 = new MySqlDataAdapter(command1);
                 DataSet dataSet1 = new DataSet();
                 adapter1.Fill(dataSet1);
+                //dataGridView1.ColumnCount = 5;
                 dataGridView1.DataSource = dataSet1.Tables[0];
 
             }

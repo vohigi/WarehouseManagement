@@ -1,6 +1,6 @@
 ﻿namespace WarehouseManagement
 {
-    partial class GoodsRecieptForm
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.CloseButton = new System.Windows.Forms.Button();
             this.AddRowButton = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.arrivalDateBox = new System.Windows.Forms.DateTimePicker();
+            this.orderDateBox = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.countBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.label8.Location = new System.Drawing.Point(336, 131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(15, 16);
-            this.label8.TabIndex = 62;
+            this.label8.TabIndex = 76;
             this.label8.Text = "*";
             // 
             // label6
@@ -63,7 +63,7 @@
             this.label6.Location = new System.Drawing.Point(336, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(15, 16);
-            this.label6.TabIndex = 61;
+            this.label6.TabIndex = 75;
             this.label6.Text = "*";
             // 
             // CloseButton
@@ -72,7 +72,7 @@
             this.CloseButton.Location = new System.Drawing.Point(16, 213);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(317, 36);
-            this.CloseButton.TabIndex = 60;
+            this.CloseButton.TabIndex = 74;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
@@ -83,7 +83,7 @@
             this.AddRowButton.Location = new System.Drawing.Point(16, 171);
             this.AddRowButton.Name = "AddRowButton";
             this.AddRowButton.Size = new System.Drawing.Size(317, 36);
-            this.AddRowButton.TabIndex = 59;
+            this.AddRowButton.TabIndex = 73;
             this.AddRowButton.Text = "Add Row";
             this.AddRowButton.UseVisualStyleBackColor = true;
             this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
@@ -94,17 +94,17 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.label5.Location = new System.Drawing.Point(12, 131);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 21);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "Arrival Date";
+            this.label5.Size = new System.Drawing.Size(93, 21);
+            this.label5.TabIndex = 72;
+            this.label5.Text = "Order Date";
             // 
-            // arrivalDateBox
+            // orderDateBox
             // 
-            this.arrivalDateBox.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.arrivalDateBox.Location = new System.Drawing.Point(141, 132);
-            this.arrivalDateBox.Name = "arrivalDateBox";
-            this.arrivalDateBox.Size = new System.Drawing.Size(192, 20);
-            this.arrivalDateBox.TabIndex = 57;
+            this.orderDateBox.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.orderDateBox.Location = new System.Drawing.Point(141, 132);
+            this.orderDateBox.Name = "orderDateBox";
+            this.orderDateBox.Size = new System.Drawing.Size(192, 20);
+            this.orderDateBox.TabIndex = 71;
             // 
             // label3
             // 
@@ -113,7 +113,7 @@
             this.label3.Location = new System.Drawing.Point(12, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 21);
-            this.label3.TabIndex = 56;
+            this.label3.TabIndex = 70;
             this.label3.Text = "Count";
             // 
             // countBox
@@ -124,7 +124,7 @@
             this.countBox.Location = new System.Drawing.Point(141, 89);
             this.countBox.Name = "countBox";
             this.countBox.Size = new System.Drawing.Size(192, 28);
-            this.countBox.TabIndex = 55;
+            this.countBox.TabIndex = 69;
             // 
             // label4
             // 
@@ -134,7 +134,7 @@
             this.label4.Location = new System.Drawing.Point(336, 55);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 16);
-            this.label4.TabIndex = 54;
+            this.label4.TabIndex = 68;
             this.label4.Text = "*";
             // 
             // label7
@@ -145,7 +145,7 @@
             this.label7.Location = new System.Drawing.Point(336, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(15, 16);
-            this.label7.TabIndex = 53;
+            this.label7.TabIndex = 67;
             this.label7.Text = "*";
             // 
             // manufacturerBox
@@ -156,8 +156,8 @@
             this.manufacturerBox.Location = new System.Drawing.Point(141, 18);
             this.manufacturerBox.Name = "manufacturerBox";
             this.manufacturerBox.Size = new System.Drawing.Size(192, 28);
-            this.manufacturerBox.TabIndex = 52;
-            this.manufacturerBox.SelectedIndexChanged += new System.EventHandler(this.manufacturerBox_SelectedIndexChanged_1);
+            this.manufacturerBox.TabIndex = 66;
+            this.manufacturerBox.SelectedIndexChanged += new System.EventHandler(this.manufacturerBox_SelectedIndexChanged);
             // 
             // modelBox
             // 
@@ -167,7 +167,7 @@
             this.modelBox.Location = new System.Drawing.Point(141, 55);
             this.modelBox.Name = "modelBox";
             this.modelBox.Size = new System.Drawing.Size(192, 28);
-            this.modelBox.TabIndex = 51;
+            this.modelBox.TabIndex = 65;
             // 
             // label2
             // 
@@ -176,7 +176,7 @@
             this.label2.Location = new System.Drawing.Point(12, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 21);
-            this.label2.TabIndex = 50;
+            this.label2.TabIndex = 64;
             this.label2.Text = "Model";
             // 
             // label1
@@ -186,10 +186,10 @@
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(109, 21);
-            this.label1.TabIndex = 49;
+            this.label1.TabIndex = 63;
             this.label1.Text = "Manufacturer";
             // 
-            // GoodsRecieptForm
+            // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -199,7 +199,7 @@
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AddRowButton);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.arrivalDateBox);
+            this.Controls.Add(this.orderDateBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.countBox);
             this.Controls.Add(this.label4);
@@ -209,9 +209,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "GoodsRecieptForm";
-            this.Text = "GoodsRecieptForm";
-            this.Load += new System.EventHandler(this.GoodsRecieptForm_Load);
+            this.Name = "OrderForm";
+            this.Text = "OrderForm";
+            this.Load += new System.EventHandler(this.OrderForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,7 +224,7 @@
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Button AddRowButton;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker arrivalDateBox;
+        private System.Windows.Forms.DateTimePicker orderDateBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox countBox;
         private System.Windows.Forms.Label label4;
