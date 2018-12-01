@@ -24,18 +24,7 @@ namespace WarehouseManagement
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataTable changes = ((DataTable)dataGridView1.DataSource).GetChanges();
-
-            if (changes != null)
-            {
-                MySqlCommandBuilder mcb = new MySqlCommandBuilder(adapter1);
-                adapter1.UpdateCommand = mcb.GetUpdateCommand();
-                adapter1.Update(changes);
-                ((DataTable)dataGridView1.DataSource).AcceptChanges();
-            }
-        }
+       
 
         private void StockForm_Load(object sender, EventArgs e)
         {

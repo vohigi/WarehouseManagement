@@ -82,5 +82,12 @@ namespace WarehouseManagement
                 MessageBox.Show(orderEx.Message);
             }
         }
+
+        private void confirmOrderToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OrderConfirmation orderConfirmation = new OrderConfirmation();
+            orderConfirmation.StartPosition = FormStartPosition.CenterParent;
+            orderConfirmation.Show(this);
+        }
     }
 }

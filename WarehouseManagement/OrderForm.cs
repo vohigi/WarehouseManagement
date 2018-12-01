@@ -150,6 +150,15 @@ namespace WarehouseManagement
                     command2.Parameters.AddWithValue("@id_prod", id_prod_e);
                     command2.Parameters.AddWithValue("@orderDate", orderDate);
                     command2.Parameters.AddWithValue("@count", count);
+                    if (command2.ExecuteNonQuery() > 0)
+                    {
+                        MessageBox.Show("Successfully inserted!");
+                        //AddToStock();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR!");
+                    }
                 }
                 else MessageBox.Show("Stock has not enough product on it. Try typing less count");
 
@@ -158,18 +167,7 @@ namespace WarehouseManagement
                 command2.Parameters.AddWithValue("@id_prod", id_prod_e);
                 command2.Parameters.AddWithValue("@arrivalDate", orderDate);
                 command2.Parameters.AddWithValue("@count", count);*/
-
-
-                if (command2.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Successfully inserted!");
-                    //AddToStock();
-                }
-                else
-                {
-                    MessageBox.Show("ERROR!");
-                }
-
+                
                 connection.Close();
             }
             catch(Exception exept)
