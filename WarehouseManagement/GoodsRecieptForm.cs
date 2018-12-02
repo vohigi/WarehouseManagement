@@ -200,5 +200,10 @@ namespace WarehouseManagement
             catch (Exception ex){ MessageBox.Show(ex.Message); }
             
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

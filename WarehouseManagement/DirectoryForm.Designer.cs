@@ -57,12 +57,13 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(367, 283);
+            this.tabControl1.Size = new System.Drawing.Size(367, 259);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tabPage1.Controls.Add(this.CloseButton);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -77,18 +78,17 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(359, 257);
+            this.tabPage1.Size = new System.Drawing.Size(359, 233);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Row";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // CloseButton
             // 
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CloseButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.Location = new System.Drawing.Point(14, 209);
+            this.CloseButton.Location = new System.Drawing.Point(14, 189);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(335, 36);
+            this.CloseButton.Size = new System.Drawing.Size(326, 36);
             this.CloseButton.TabIndex = 36;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             // 
             this.AddRowButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AddRowButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddRowButton.Location = new System.Drawing.Point(14, 167);
+            this.AddRowButton.Location = new System.Drawing.Point(14, 147);
             this.AddRowButton.Name = "AddRowButton";
-            this.AddRowButton.Size = new System.Drawing.Size(335, 36);
+            this.AddRowButton.Size = new System.Drawing.Size(326, 36);
             this.AddRowButton.TabIndex = 13;
             this.AddRowButton.Text = "Add Row";
             this.AddRowButton.UseVisualStyleBackColor = true;
@@ -208,7 +208,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(359, 257);
+            this.tabPage2.Size = new System.Drawing.Size(359, 233);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Table";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(353, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(353, 227);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -234,7 +234,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 283);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(367, 259);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DirectoryForm";
