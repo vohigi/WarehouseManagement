@@ -56,7 +56,9 @@ namespace WarehouseManagement
             conn.Open();
 
             var doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream(Application.StartupPath + @"\Report.pdf", FileMode.Create));
+            PdfWriter.GetInstance(doc, new FileStream(Application.StartupPath + @"\Report" + 
+                dateTimePicker1.Value.ToString("(dd.MM.yyyy") + " - " +
+                dateTimePicker2.Value.ToString("dd.MM.yyyy)") + ".pdf", FileMode.Create));
             doc.Open();
             BaseFont baseFont = BaseFont.CreateFont(@"C:\times.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
             iTextSharp.text.Font font = new iTextSharp.text.Font(baseFont, iTextSharp.text.Font.DEFAULTSIZE, iTextSharp.text.Font.NORMAL);
@@ -164,7 +166,6 @@ namespace WarehouseManagement
                 table.AddCell("Count");
                 table.AddCell("Order Date");
                 table.AddCell("Confirmed");
-                string date = "";
                 while (reader.Read())
                 {
                     table.AddCell((reader[0].ToString()));
@@ -225,6 +226,10 @@ namespace WarehouseManagement
             
 
             conn.Close();
+            if (openFileCheckBox.Checked)
+                System.Diagnostics.Process.Start("Report" +
+                dateTimePicker1.Value.ToString("(dd.MM.yyyy") + " - " +
+                dateTimePicker2.Value.ToString("dd.MM.yyyy)") + ".pdf");
 
         }
 
@@ -233,6 +238,16 @@ namespace WarehouseManagement
             this.Close();
         }
 
-
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";
+            if (saveFileDialog1.ShowDialog() ==
+            System.Windows.Forms.DialogResult.OK
+            && saveFileDialog1.FileName.Length > 0)
+            {
+                //richTextBox1.SaveFile(saveFileDialog1.FileName,
+                //RichTextBoxStreamType.PlainText);
+            }
+        }
     }
 }
