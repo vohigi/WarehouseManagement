@@ -56,11 +56,16 @@ namespace WarehouseManagement
             conn.Open();
 
             var doc = new Document();
+
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             Stream myStream;
             saveFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";
             saveFileDialog1.FilterIndex = 2;
             saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.FileName = "Report" +
+                dateTimePicker1.Value.ToString("(dd.MM.yyyy") + " - " +
+                dateTimePicker2.Value.ToString("dd.MM.yyyy)"); // Default file name
+            saveFileDialog1.DefaultExt = ".pdf";
             string path = "";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -237,10 +242,13 @@ namespace WarehouseManagement
 
 
                     conn.Close();
+                    if (openFileCheckBox.Checked)
+                        System.Diagnostics.Process.Start(path);
                 }
-                
+                else { MessageBox.Show("Error!! Wrong file name or path!"); }
+
             }
-            else { MessageBox.Show("Error!! Wrong file name or path!"); }
+
 
         }
 
@@ -249,6 +257,16 @@ namespace WarehouseManagement
             this.Close();
         }
 
-
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "pdf files (*.pdf)|*.pdf";
+            if (saveFileDialog1.ShowDialog() ==
+            System.Windows.Forms.DialogResult.OK
+            && saveFileDialog1.FileName.Length > 0)
+            {
+                //richTextBox1.SaveFile(saveFileDialog1.FileName,
+                //RichTextBoxStreamType.PlainText);
+            }
+        }
     }
 }
