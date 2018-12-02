@@ -248,8 +248,6 @@ namespace WarehouseManagement
                 else { MessageBox.Show("Error!! Wrong file name or path!"); }
 
             }
-
-
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -267,6 +265,11 @@ namespace WarehouseManagement
                 //richTextBox1.SaveFile(saveFileDialog1.FileName,
                 //RichTextBoxStreamType.PlainText);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,7 +29,8 @@ namespace WarehouseManagement
             try
             {
                 MySqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT id_order, manufacturer, model_name, count, date_order, is_confirmed" +
+                command1.CommandText = "SELECT id_order as ID, manufacturer as Manufacturer, model_name as Model, " +
+                    "count as Count, date_order as 'Order Date', is_confirmed as 'Confirmation'" +
                     " FROM product_order, product_directory" +
                     " WHERE product_order.id_prod = product_directory.id_prod;";
                 adapter1 = new MySqlDataAdapter(command1);

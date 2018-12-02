@@ -37,7 +37,8 @@ namespace WarehouseManagement
             try
             {
                 MySqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT * FROM product_directory";
+                command1.CommandText = "SELECT id_prod as ID, manufacturer as Manufacturer, model_name as Model, price as Price " +
+                    "FROM product_directory";
                 adapter1 = new MySqlDataAdapter(command1);
                 DataSet dataSet1 = new DataSet();
                 adapter1.Fill(dataSet1);

@@ -116,7 +116,10 @@ namespace WarehouseManagement
             try
             {
                 MySqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT id_order, manufacturer, model_name, price, date_order, count FROM product_order, product_directory WHERE product_directory.id_prod=product_order.id_prod AND product_order.is_confirmed=0";
+                command1.CommandText = "SELECT id_order as ID, manufacturer as Manufacturer, " +
+                    "model_name as Model, price as 'Total Price', date_order as 'Order Date', count as Count " +
+                    "FROM product_order, product_directory WHERE product_directory.id_prod=product_order.id_prod " +
+                    "AND product_order.is_confirmed=0";
                 adapter1 = new MySqlDataAdapter(command1);
                 DataSet dataSet1 = new DataSet();
                 adapter1.Fill(dataSet1);
@@ -125,6 +128,11 @@ namespace WarehouseManagement
             }
             catch { }
             connection.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

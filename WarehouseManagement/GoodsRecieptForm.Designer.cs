@@ -68,6 +68,7 @@
             // 
             // CloseButton
             // 
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CloseButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.Location = new System.Drawing.Point(16, 213);
             this.CloseButton.Name = "CloseButton";
@@ -79,6 +80,7 @@
             // 
             // AddRowButton
             // 
+            this.AddRowButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AddRowButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddRowButton.Location = new System.Drawing.Point(16, 171);
             this.AddRowButton.Name = "AddRowButton";

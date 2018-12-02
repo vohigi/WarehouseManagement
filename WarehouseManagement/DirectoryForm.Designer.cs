@@ -84,6 +84,7 @@
             // 
             // CloseButton
             // 
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.CloseButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.Location = new System.Drawing.Point(14, 209);
             this.CloseButton.Name = "CloseButton";
@@ -128,6 +129,7 @@
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.manufacturerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.manufacturerBox.FormattingEnabled = true;
             this.manufacturerBox.Location = new System.Drawing.Point(139, 20);
@@ -138,6 +140,7 @@
             // 
             // AddRowButton
             // 
+            this.AddRowButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AddRowButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddRowButton.Location = new System.Drawing.Point(14, 167);
             this.AddRowButton.Name = "AddRowButton";
@@ -150,6 +153,7 @@
             // priceBox
             // 
             this.priceBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.priceBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.priceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.priceBox.FormattingEnabled = true;
             this.priceBox.Location = new System.Drawing.Point(139, 91);
@@ -160,6 +164,7 @@
             // modelBox
             // 
             this.modelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.modelBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.modelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.modelBox.FormattingEnabled = true;
             this.modelBox.Location = new System.Drawing.Point(139, 57);

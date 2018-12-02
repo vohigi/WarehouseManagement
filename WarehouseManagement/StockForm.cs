@@ -28,7 +28,9 @@ namespace WarehouseManagement
             try
             {
                 MySqlCommand command1 = connection.CreateCommand();
-                command1.CommandText = "SELECT id_stock, manufacturer, model_name, price, count_stock FROM stock, product_directory " +
+                command1.CommandText = "SELECT id_stock as ID, manufacturer as Manufacturer, " +
+                    "model_name as Model, count_stock as Count, price as 'Total Price' " +
+                    "FROM stock, product_directory " +
                     "WHERE product_directory.id_prod=stock.id_prod";
                 adapter1 = new MySqlDataAdapter(command1);
                 DataSet dataSet1 = new DataSet();
