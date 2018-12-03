@@ -39,6 +39,7 @@
             this.dispalyOrdersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.confirmOrderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.makeAReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             this.productDirectoryToolStripMenuItem,
             this.goodsReceiptToolStripMenuItem,
             this.ordersToolStripMenuItem,
-            this.makeAReportToolStripMenuItem});
+            this.makeAReportToolStripMenuItem,
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -130,6 +132,13 @@
             this.makeAReportToolStripMenuItem.Text = "Display Report";
             this.makeAReportToolStripMenuItem.Click += new System.EventHandler(this.makeAReportToolStripMenuItem_Click);
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +170,7 @@
         private System.Windows.Forms.ToolStripMenuItem displayGoodsReceiptToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem confirmOrderToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem makeAReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

@@ -103,5 +103,12 @@ namespace WarehouseManagement
             orderReportForm.StartPosition = FormStartPosition.CenterParent;
             orderReportForm.Show(this);
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.StartPosition = FormStartPosition.CenterParent;
+            aboutForm.Show(this);
+        }
     }
 }
