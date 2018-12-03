@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -44,7 +45,11 @@ namespace WarehouseManagement
                 adapter1.Fill(dataSet1);
                 //dataGridView1.ColumnCount = 5;
                 dataGridView1.DataSource = dataSet1.Tables[0];
+                foreach(DataGridViewColumn column in dataGridView1.Columns)
+                {
+                    column.AutoSizeMode= DataGridViewAutoSizeColumnMode.Fill;
 
+                } 
             }
             catch { }
             connection.Close();
@@ -196,6 +201,47 @@ namespace WarehouseManagement
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadProductDirectoryTable();
+        }
+
+        private void modelBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var regex = new Regex(@"[^a-zA-Z0-9\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void manufacturerBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var regex = new Regex(@"[^a-zA-Z0-9\s\b]");
+            if (regex.IsMatch(e.KeyChar.ToString()))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void priceBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //var regex = new Regex(@"^[0-9]*(?:\.[0-9]*)?$");
+            //if (regex.IsMatch(e.KeyChar.ToString()))
+            //{
+            //    e.Handled = true;
+            //
+            try
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+                {
+                    e.Handled = true;
+                }
+
+                // only allow one decimal point
+                if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+                {
+                    e.Handled = true;
+                }
+            }
+            catch { }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace WarehouseManagement
 
         List<string> modelList = new List<string>();
         MainWindow obj = (MainWindow)Application.OpenForms["MainWindow"];
-
+        StockForm obj2 = (StockForm)Application.OpenForms["Stock"];
         public GoodsRecieptForm()
         {
             InitializeComponent();
@@ -83,59 +83,71 @@ namespace WarehouseManagement
             connection.Close();
         }
 
-        
+
 
         private void AddRowButton_Click(object sender, EventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
-            connection.Open();
-
-            MySqlCommand command1 = connection.CreateCommand();
-            MySqlCommand command2 = connection.CreateCommand();
-            MySqlCommand command3 = connection.CreateCommand();
-
-            string manufacturerText = manufacturerBox.Text;
-            string modelText = modelBox.Text;
-            uint count = Convert.ToUInt32(countBox.Text);
-
-            string arrivalDate = arrivalDateBox.Value.ToString("yyyy-MM-dd");
-
-            command3.CommandText = "SELECT id_prod from product_directory " +
-                "WHERE product_directory.manufacturer = @manufacturerText " +
-                "and product_directory.model_name = @modelText";
-            command3.Parameters.AddWithValue("@manufacturerText", manufacturerText);
-            command3.Parameters.AddWithValue("@modelText", modelText);
-            MySqlDataReader reader = command3.ExecuteReader();
-            string id_prod_e = "";
-            if (reader.Read())
+            try
             {
-                id_prod_e = reader["id_prod"].ToString();
+
+
+                MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
+                connection.Open();
+
+                MySqlCommand command1 = connection.CreateCommand();
+                MySqlCommand command2 = connection.CreateCommand();
+                MySqlCommand command3 = connection.CreateCommand();
+
+                string manufacturerText = manufacturerBox.Text;
+                string modelText = modelBox.Text;
+                uint count = Convert.ToUInt32(countBox.Text);
+
+                string arrivalDate = arrivalDateBox.Value.ToString("yyyy-MM-dd");
+
+                command3.CommandText = "SELECT id_prod from product_directory " +
+                    "WHERE product_directory.manufacturer = @manufacturerText " +
+                    "and product_directory.model_name = @modelText";
+                command3.Parameters.AddWithValue("@manufacturerText", manufacturerText);
+                command3.Parameters.AddWithValue("@modelText", modelText);
+                MySqlDataReader reader = command3.ExecuteReader();
+                string id_prod_e = "";
+                if (reader.Read())
+                {
+                    id_prod_e = reader["id_prod"].ToString();
+                }
+                reader.Close();
+
+                command2.CommandText = "INSERT INTO goods_receipt(id_prod, date_arrival, count)" +
+                    "values(@id_prod, @arrivalDate, @count)";
+                command2.Parameters.AddWithValue("@id_prod", id_prod_e);
+                command2.Parameters.AddWithValue("@arrivalDate", arrivalDate);
+                command2.Parameters.AddWithValue("@count", count);
+
+                /*command1.CommandText = "INSERT INTO goods_receipt(id_prod, count_stock " +
+                    "values(@id_prod, @count)";
+                command1.Parameters.AddWithValue("@id_prod", id_prod_e);
+                command1.Parameters.AddWithValue("@count", count);*/ //non working
+                if (command2.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Successfully inserted!");
+                    AddToStock();
+                    try
+                    {
+                        var stock_form = Application.OpenForms.OfType<StockForm>().Single();
+                        stock_form.LoadData();
+                    }
+                    catch { }
+                }
+                else
+                {
+                    MessageBox.Show("ERROR!");
+                }
+
+
+
+                
             }
-            reader.Close();
-
-            command2.CommandText = "INSERT INTO goods_receipt(id_prod, date_arrival, count)" +
-                "values(@id_prod, @arrivalDate, @count)";
-            command2.Parameters.AddWithValue("@id_prod", id_prod_e);
-            command2.Parameters.AddWithValue("@arrivalDate", arrivalDate);
-            command2.Parameters.AddWithValue("@count", count);
-
-            /*command1.CommandText = "INSERT INTO goods_receipt(id_prod, count_stock " +
-                "values(@id_prod, @count)";
-            command1.Parameters.AddWithValue("@id_prod", id_prod_e);
-            command1.Parameters.AddWithValue("@count", count);*/ //non working
-            if (command2.ExecuteNonQuery() > 0)
-            {
-                MessageBox.Show("Successfully inserted!");
-                AddToStock();
-            }
-            else
-            {
-                MessageBox.Show("ERROR!");
-            }
-
-
-
-            connection.Close();
+            catch (Exception ex) { MessageBox.Show(ex.Message,"ERROR"); }
         }
 
         private void manufacturerBox_SelectedIndexChanged_1(object sender, EventArgs e)

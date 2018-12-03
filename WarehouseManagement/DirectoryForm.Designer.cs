@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.CloseButton = new System.Windows.Forms.Button();
@@ -54,16 +56,17 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(367, 259);
+            this.tabControl1.Size = new System.Drawing.Size(388, 259);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tabPage1.Controls.Add(this.CloseButton);
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.label4);
@@ -75,23 +78,23 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(359, 233);
+            this.tabPage1.Size = new System.Drawing.Size(380, 227);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add Row";
             // 
             // CloseButton
             // 
-            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.CloseButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CloseButton.Location = new System.Drawing.Point(14, 189);
+            this.CloseButton.Location = new System.Drawing.Point(14, 180);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(326, 36);
             this.CloseButton.TabIndex = 36;
             this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.UseVisualStyleBackColor = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // label5
@@ -129,6 +132,7 @@
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.manufacturerBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.manufacturerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.manufacturerBox.FormattingEnabled = true;
@@ -137,21 +141,23 @@
             this.manufacturerBox.Size = new System.Drawing.Size(192, 28);
             this.manufacturerBox.TabIndex = 14;
             this.manufacturerBox.SelectedIndexChanged += new System.EventHandler(this.manufacturerBox_SelectedIndexChanged);
+            this.manufacturerBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.manufacturerBox_KeyPress);
             // 
             // AddRowButton
             // 
-            this.AddRowButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AddRowButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.AddRowButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddRowButton.Location = new System.Drawing.Point(14, 147);
+            this.AddRowButton.Location = new System.Drawing.Point(14, 135);
             this.AddRowButton.Name = "AddRowButton";
             this.AddRowButton.Size = new System.Drawing.Size(326, 36);
             this.AddRowButton.TabIndex = 13;
             this.AddRowButton.Text = "Add Row";
-            this.AddRowButton.UseVisualStyleBackColor = true;
+            this.AddRowButton.UseVisualStyleBackColor = false;
             this.AddRowButton.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // priceBox
             // 
+            this.priceBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.priceBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.priceBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.priceBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -160,9 +166,11 @@
             this.priceBox.Name = "priceBox";
             this.priceBox.Size = new System.Drawing.Size(192, 28);
             this.priceBox.TabIndex = 12;
+            this.priceBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.priceBox_KeyPress);
             // 
             // modelBox
             // 
+            this.modelBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.modelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.modelBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.modelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
@@ -171,6 +179,7 @@
             this.modelBox.Name = "modelBox";
             this.modelBox.Size = new System.Drawing.Size(192, 28);
             this.modelBox.TabIndex = 11;
+            this.modelBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.modelBox_KeyPress);
             // 
             // label3
             // 
@@ -205,10 +214,10 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(359, 233);
+            this.tabPage2.Size = new System.Drawing.Size(380, 227);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Table";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -220,13 +229,27 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(353, 227);
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Size = new System.Drawing.Size(374, 221);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -234,8 +257,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(367, 259);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(388, 259);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "DirectoryForm";

@@ -68,24 +68,26 @@
             // 
             // CloseButton
             // 
+            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.CloseButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CloseButton.Location = new System.Drawing.Point(16, 213);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(317, 36);
             this.CloseButton.TabIndex = 74;
             this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.UseVisualStyleBackColor = false;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // AddRowButton
             // 
+            this.AddRowButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.AddRowButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AddRowButton.Location = new System.Drawing.Point(16, 171);
             this.AddRowButton.Name = "AddRowButton";
             this.AddRowButton.Size = new System.Drawing.Size(317, 36);
             this.AddRowButton.TabIndex = 73;
             this.AddRowButton.Text = "Add Row";
-            this.AddRowButton.UseVisualStyleBackColor = true;
+            this.AddRowButton.UseVisualStyleBackColor = false;
             this.AddRowButton.Click += new System.EventHandler(this.AddRowButton_Click);
             // 
             // label5
@@ -101,6 +103,10 @@
             // orderDateBox
             // 
             this.orderDateBox.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.orderDateBox.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.orderDateBox.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.orderDateBox.CalendarTitleForeColor = System.Drawing.Color.Yellow;
+            this.orderDateBox.CalendarTrailingForeColor = System.Drawing.Color.Yellow;
             this.orderDateBox.Location = new System.Drawing.Point(141, 132);
             this.orderDateBox.Name = "orderDateBox";
             this.orderDateBox.Size = new System.Drawing.Size(192, 20);
@@ -118,6 +124,7 @@
             // 
             // countBox
             // 
+            this.countBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.countBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
             this.countBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.countBox.FormattingEnabled = true;
@@ -150,6 +157,7 @@
             // 
             // manufacturerBox
             // 
+            this.manufacturerBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.manufacturerBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.manufacturerBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.manufacturerBox.FormattingEnabled = true;
@@ -161,6 +169,7 @@
             // 
             // modelBox
             // 
+            this.modelBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.modelBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.modelBox.FormattingEnabled = true;
@@ -193,6 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(359, 266);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);

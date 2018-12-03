@@ -45,7 +45,7 @@
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(12, 219);
@@ -53,12 +53,12 @@
             this.button1.Size = new System.Drawing.Size(230, 30);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create a Report";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
@@ -116,7 +116,7 @@
             // 
             // Close
             // 
-            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.Close.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.Close.ForeColor = System.Drawing.Color.Black;
             this.Close.Location = new System.Drawing.Point(12, 255);
@@ -124,12 +124,12 @@
             this.Close.Size = new System.Drawing.Size(230, 30);
             this.Close.TabIndex = 52;
             this.Close.Text = "Close";
-            this.Close.UseVisualStyleBackColor = true;
+            this.Close.UseVisualStyleBackColor = false;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
             // checkedListBox1
             // 
-            this.checkedListBox1.BackColor = System.Drawing.Color.White;
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.Font = new System.Drawing.Font("Times New Roman", 10.25F);
@@ -148,7 +148,7 @@
             // openFileCheckBox
             // 
             this.openFileCheckBox.AutoSize = true;
-            this.openFileCheckBox.BackColor = System.Drawing.Color.White;
+            this.openFileCheckBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.openFileCheckBox.Font = new System.Drawing.Font("Times New Roman", 11.25F);
             this.openFileCheckBox.ForeColor = System.Drawing.Color.Black;
             this.openFileCheckBox.Location = new System.Drawing.Point(43, 192);
@@ -172,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12.5F);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(48, 31);
@@ -185,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(252, 295);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);

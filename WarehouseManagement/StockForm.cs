@@ -23,6 +23,10 @@ namespace WarehouseManagement
         
         private void StockForm_Load(object sender, EventArgs e)
         {
+            LoadData();
+        }
+        public void LoadData()
+        {
             MySqlConnection connection = new MySqlConnection(obj.mySqlConnectionStr);
             connection.Open();
             try
@@ -36,12 +40,15 @@ namespace WarehouseManagement
                 DataSet dataSet1 = new DataSet();
                 adapter1.Fill(dataSet1);
                 dataGridView1.DataSource = dataSet1.Tables[0];
+                foreach (DataGridViewColumn column in dataGridView1.Columns)
+                {
+                    column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
 
             }
             catch { }
             connection.Close();
         }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

@@ -20,6 +20,8 @@ namespace WarehouseManagement
         public MainWindow()
         {
             InitializeComponent();
+            menuStrip1.Renderer = new MyRenderer();
+            menuStrip1.BackColor = Color.Coral;
         }
 
         private void warehouseStockToolStripMenuItem_Click(object sender, EventArgs e)
@@ -27,8 +29,7 @@ namespace WarehouseManagement
             try
             {
                 StockForm stockForm = new StockForm();
-                
-                stockForm.ShowDialog(this);
+                stockForm.Show(this);
             }
             catch (Exception stockEx)
             {
@@ -103,5 +104,26 @@ namespace WarehouseManagement
             orderReportForm.StartPosition = FormStartPosition.CenterParent;
             orderReportForm.Show(this);
         }
+        private class MyRenderer : ToolStripProfessionalRenderer
+        {
+            public MyRenderer() : base(new MyColors()) { }
+        }
+
+        private class MyColors : ProfessionalColorTable
+        {
+            public override Color MenuItemSelected
+            {
+                get { return Color.Yellow; }
+            }
+            public override Color MenuItemSelectedGradientBegin
+            {
+                get { return Color.Orange; }
+            }
+            public override Color MenuItemSelectedGradientEnd
+            {
+                get { return Color.Yellow; }
+            }
+        }
+
     }
 }
