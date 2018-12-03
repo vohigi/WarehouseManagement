@@ -104,6 +104,7 @@ namespace WarehouseManagement
             orderReportForm.StartPosition = FormStartPosition.CenterParent;
             orderReportForm.Show(this);
         }
+
         private class MyRenderer : ToolStripProfessionalRenderer
         {
             public MyRenderer() : base(new MyColors()) { }
@@ -123,6 +124,14 @@ namespace WarehouseManagement
             {
                 get { return Color.Yellow; }
             }
+        }
+
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.StartPosition = FormStartPosition.CenterParent;
+            aboutForm.Show(this);
         }
 
     }
